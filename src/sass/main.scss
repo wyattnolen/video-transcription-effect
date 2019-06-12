@@ -1,1 +1,13 @@
-@import "components/base"
+@import "components/base";
+
+audio {
+  width: 100%;
+}
+
+span {
+  color: #e9e9e9;
+  transition: all 0.25s ease;
+}
+.active {
+  color: #000;
+}

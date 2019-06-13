@@ -20,7 +20,7 @@ function playTranscript() {
       return v <= audio.currentTime;
     })
   );
-
+  // if-statement is in place to help prevent the remaining code to from running needlessly if the 'time window' hasn't changed.
   if (previousDialogueTime !== currentDialogueTime) {
     previousDialogueTime = currentDialogueTime;
     // Based on the assumption that the array of times, and array of elements is in the same order,
@@ -33,5 +33,7 @@ function playTranscript() {
         ""
       );
     currentDialogue.className += " active";
+  } else {
+    console.log("end of the line");
   }
 }

@@ -1,39 +1,48 @@
+var playButton = document.getElementById("play");
 var audio = document.getElementById("audio");
-var el = Object.values(document.querySelectorAll("span"));
-var times = el.map(span => Number(span.dataset.timing));
+var pList = Object.values(document.querySelectorAll("p.speech"));
+var pListTimes = pList.map(p => Number(p.lastElementChild.dataset.timing));
+var spanList = Object.values(document.querySelectorAll("span"));
+var spanListTimes = spanList.map(span => Number(span.dataset.timing));
 var previousDialogueTime = -1;
 
-// Every time the audio time updates, run the function
+playButton.addEventListener("click", function() {
+  document.getElementsByClassName("header")[0].classList.add("header--pinned");
+  document.getElementsByClassName("speech__holder")[0].classList.add("active");
+  document
+    .getElementsByClassName("audio-holder")[0]
+    .classList.add("audio-holder--active");
+  audio.play();
+});
+
 audio.ontimeupdate = function() {
   playTranscript();
 };
 
-function playTranscript() {
-  // Show current audio time
-  document.getElementById("pre").innerHTML = audio.currentTime;
-
-  // Determine the current dialogue time window
-  // The approach is filter the array of timings based on the current audio time, and then take the max of those values,
+function getCurrentDialogueTime(listOfTimes) {
   var currentDialogueTime = Math.max.apply(
     Math,
-    times.filter(function(v) {
+    listOfTimes.filter(function(v) {
       return v <= audio.currentTime;
     })
   );
-  // if-statement is in place to help prevent the remaining code to from running needlessly if the 'time window' hasn't changed.
-  if (previousDialogueTime !== currentDialogueTime) {
-    previousDialogueTime = currentDialogueTime;
-    // Based on the assumption that the array of times, and array of elements is in the same order,
-    // grab the corresponding element based on where the current audio time is.
-    var currentDialogue = el[times.indexOf(currentDialogueTime)];
-    var previousDialogue = document.getElementsByClassName("active")[0];
-    if (previousDialogue !== undefined)
+  return currentDialogueTime;
+}
+
+function playTranscript() {
+  var timeWindow = getCurrentDialogueTime(spanListTimes);
+  if (previousDialogueTime !== timeWindow) {
+    previousDialogueTime = timeWindow;
+    var currentDialogue = spanList[spanListTimes.indexOf(timeWindow)];
+    var previousDialogue = document.getElementsByClassName("current")[0];
+    if (previousDialogue !== undefined) {
+      previousDialogue.parentNode.parentNode.className = "speech";
       previousDialogue.className = previousDialogue.className.replace(
-        "active",
+        "current",
         ""
       );
-    currentDialogue.className += " active";
-  } else {
-    console.log("end of the line");
+    }
+    currentDialogue.parentNode.parentNode.className += " speech--current";
+    currentDialogue.className += "current";
   }
 }

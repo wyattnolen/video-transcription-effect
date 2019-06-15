@@ -1,13 +1,249 @@
-@import "components/base";
+/*-------------------------------------------*\
+    Index:
+      - Site Header
+        - Top
+        - Logo
+\*-------------------------------------------*/
 
-audio {
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  background-color: #29262a;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 10px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.feature {
+  max-width: 100%;
+  position: relative;
   width: 100%;
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  z-index: 0;
+  &:before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: 150%;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 60vh;
+  // position: relative;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90%;
+  padding: 20px;
+  z-index: 100;
+
+  &--pinned {
+    animation-name: fade, pin-to-top;
+    animation-duration: 1s, 2s;
+    animation-delay: 0s, 1s;
+    animation-fill-mode: forwards;
+  }
+}
+.title {
+  margin: 0;
+  font-size: 2.4em;
+  color: #fff;
+  text-transform: none;
+  &--small {
+    margin: 0;
+    font-size: 1.8em;
+    color: #c7933c;
+    text-transform: uppercase;
+  }
+}
+.speech__holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-basis: 90%;
+  transition: opacity ease 1s;
+  transition-delay: 2s;
+  opacity: 0;
+  &.active {
+    opacity: 1;
+  }
+}
+.speech {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  transition: opacity ease 1s;
+  opacity: 0;
+  &--current {
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+  }
+}
+span {
+  transition: all 0.25s ease;
+  color: #fff;
+  opacity: 0.2;
+  line-height: 2;
+  &.current {
+    opacity: 1;
+  }
+}
+.audio-holder {
+  flex-basis: 10%;
+  width: 100%;
+  // height: 10vh;
+  padding: 10px 0;
+  background-color: #000;
+  transition: opacity ease 2s;
+  transition-delay: 2s;
+  opacity: 0;
+  &--active {
+    opacity: 1;
+  }
+}
+audio {
+  display: block;
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  transition: opacity ease-out 4s;
+  transition-delay: 4s;
+  z-index: 100;
 }
 
-span {
-  color: #e9e9e9;
-  transition: all 0.25s ease;
+// Begin those sweet animations
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-.active {
-  color: #000;
+@keyframes pin-to-top {
+  0% {
+    top: -100%;
+    height: 10%;
+    font-size: 5px;
+  }
+  50% {
+    top: 0;
+    height: 10%;
+    font-size: 5px;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    height: 10%;
+    font-size: 5px;
+    opacity: 1;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    flex-direction: row;
+  }
+  .feature {
+    max-width: 40%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    z-index: 0;
+    &:before {
+      display: block;
+      content: " ";
+      width: 100%;
+      padding-top: 150%;
+    }
+  }
+  .content {
+    width: 60%;
+    height: 100vh;
+  }
+  .header {
+    font-size: 10px;
+    &--pinned {
+    }
+  }
+  .title {
+    font-size: 4em;
+    line-height: 2em;
+    &--small {
+      font-size: 2em;
+      line-height: 1em;
+    }
+  }
+  .speech__holder {
+    margin: 10vw;
+  }
+  .current--speech {
+    &:before {
+      font-family: Georgia, serif;
+      content: "\201C";
+      font-size: 5rem;
+      color: #fff;
+      opacity: 0.5;
+    }
+    &:after {
+      font-family: Georgia, serif;
+      content: "\02EE";
+      font-size: 5rem;
+      font-size: 5rem;
+      color: #fff;
+      opacity: 0.5;
+    }
+  }
+  audio {
+  }
+  span {
+    font-size: 1.4rem;
+    .current {
+    }
+  }
+}
+@media (min-width: 992px) {
 }

@@ -2,146 +2,181 @@
 <html>
 
 <head>
-	<title>Copy Me</title>
+	<title>Video Transcription Effect</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
-	<audio id="audio" controls>
-		<source src="assets/speech.mp4" type="audio/mpeg">
-	</audio>
-	<pre id="pre"></pre>
-	<p>
-		<span data-timing="5.18"> I’m sorry,</span>
-		<span data-timing="7.14"> but I don’t want to be an emperor.</span>
-		<span data-timing="9.12"> That’s not my business.</span>
-		<span data-timing="11.17"> I don’t want to rule</span>
-		<span data-timing="12.10"> or conquer anyone.</span>
-		<span data-timing="14.04"> I should like to help everyone - if possible</span>
-		<span data-timing="15.59"> - Jew,</span>
-		<span data-timing="16.16"> Gentile -</span>
-		<span data-timing="17.19"> black man -</span>
-		<span data-timing="18.09"> white.</span>
-		<span data-timing="19.15"> We all want to help one another.</span>
-		<span data-timing="21.06"> Human beings are like that.</span>
-		<span data-timing="23.05"> We want to live by each other’s happiness</span>
-		<span data-timing="24.14"> - not by each other’s misery. </span>
-		<span data-timing="26.12"> We don’t want to hate and despise one another.</span>
-		<span data-timing="29.01"> In this world there is room for everyone.</span>
-		<span data-timing="30.16"> And the good earth is rich</span>
-		<span data-timing="32.08"> and can provide for everyone.</span>
-		<span data-timing="34.09"> The way of life can be free</span>
-		<span data-timing="35.18"> and beautiful,</span>
-		<span data-timing="37.08"> but we have lost the way.</span>
+	<article class="main">
+		<section class="feature" style="background-image: url(./assets/bg.png);">
+		</section>
+		<section class="content">
+			<header class="header">
+				<p class="title--small">Charles Chaplin</p>
+				<h1 class="title">The Great Dictator</h1>
+				<button id="play"></button>
+			</header>
+			<div class="speech__holder">
+				<div class="speech speech--current">
+					<p class="speech__inner">
+						<span data-timing="5.18"> I’m sorry, </span>
+						<span data-timing="7.14"> but I don’t want to be an emperor. </span>
+						<span data-timing="9.12"> That’s not my business. </span>
+						<span data-timing="11.17"> I don’t want to rule </span>
+						<span data-timing="12.10"> or conquer anyone. </span>
+						<span data-timing="14.04"> I should like to help everyone - if possible </span>
+						<span data-timing="15.59"> - Jew, </span>
+						<span data-timing="16.16"> Gentile - </span>
+						<span data-timing="17.19"> black man - </span>
+						<span data-timing="18.09"> white. </span>
+						<span data-timing="19.15"> We all want to help one another. </span>
+						<span data-timing="21.06"> Human beings are like that. </span>
+						<span data-timing="23.05"> We want to live by each other’s happiness </span>
+						<span data-timing="24.14"> - not by each other’s misery. </span>
+						<span data-timing="26.12"> We don’t want to hate and despise one another. </span>
+						<span data-timing="29.01"> In this world there is room for everyone. </span>
+						<span data-timing="30.16"> And the good earth is rich </span>
+						<span data-timing="32.08"> and can provide for everyone. </span>
+						<span data-timing="34.09"> The way of life can be free </span>
+						<span data-timing="35.18"> and beautiful, </span>
+						<span data-timing="37.08"> but we have lost the way. </span>
+					</p>
+				</div>
+				<div class="speech">
+					<p class="speech__inner">
+						<span data-timing="39.11"> Greed has poisoned men’s souls, </span>
+						<span data-timing="41.4"> has barricaded the world with hate, </span>
+						<span data-timing="44.11"> has goose-stepped us into misery and bloodshed. </span>
+						<span data-timing="47.11"> We have developed speed, </span>
+						<span data-timing="48.19"> but we have shut ourselves in. </span>
+						<span data-timing="50.20"> Machinery that gives abundance </span>
+						<span data-timing="52.1"> has left us in want. </span>
+						<span data-timing="53.17"> Our knowledge has made us cynical. </span>
+						<span data-timing="55.13"> Our cleverness, hard and unkind. </span>
+						<span data-timing="57.22"> We think too much </span>
+						<span data-timing="58.18"> and feel too little. </span>
+						<span data-timing="60.25"> More than machinery </span>
+						<span data-timing="62.04"> we need humanity. </span>
+						<span data-timing="63.09"> More than cleverness </span>
+						<span data-timing="64.72"> we need kindness </span>
+						<span data-timing="66.01"> and gentleness. </span>
+						<span data-timing="67.05"> Without these qualities, life will be violent </span>
+						<span data-timing="69.19"> and all will be lost... </span>
+					</p>
+				</div>
+				<div class="speech">
+					<p class="speech__inner">
+						<span data-timing="71.12"> The aeroplane and the radio have brought us closer together. </span>
+						<span data-timing="74.90"> The very nature of these inventions cries out for the goodness in
+							men </span>
+						<span data-timing="77.18"> - cries out for universal brotherhood </span>
+						<span data-timing="79.12"> - for the unity of us all. </span>
+						<span data-timing="81.0"> Even now my voice is reaching millions throughout the world </span>
+						<span data-timing="84.03"> - millions of despairing men, women, and little children - </span>
+						<span data-timing="87.14"> victims of a system that makes men torture </span>
+						<span data-timing="90.07"> and imprison innocent people. </span>
 
-		<span data-timing="39.11"> Greed has poisoned men’s souls,</span>
-		<span data-timing="41.4"> has barricaded the world with hate, </span>
-		<span data-timing="44.11"> has goose-stepped us into misery and bloodshed.</span>
-		<span data-timing="47.11"> We have developed speed,</span>
-		<span data-timing="48.19"> but we have shut ourselves in. </span>
-		<span data-timing="50.20"> Machinery that gives abundance </span>
-		<span data-timing="52.1"> has left us in want.</span>
-		<span data-timing="53.17"> Our knowledge has made us cynical.</span>
-		<span data-timing="55.13"> Our cleverness, hard and unkind.</span>
-		<span data-timing="57.22"> We think too much</span>
-		<span data-timing="58.18"> and feel too little.</span>
-		<span data-timing="60.25"> More than machinery</span>
-		<span data-timing="62.04"> we need humanity.</span>
-		<span data-timing="63.09"> More than cleverness</span>
-		<span data-timing="64.72"> we need kindness</span>
-		<span data-timing="66.01"> and gentleness. </span>
-		<span data-timing="67.05"> Without these qualities, life will be violent</span>
-		<span data-timing="69.19"> and all will be lost...</span>
-
-		<span data-timing="71.12"> The aeroplane and the radio have brought us closer together.</span>
-		<span data-timing="74.90"> The very nature of these inventions cries out for the goodness in men</span>
-		<span data-timing="77.18"> - cries out for universal brotherhood</span>
-		<span data-timing="79.12"> - for the unity of us all.</span>
-		<span data-timing="81.0"> Even now my voice is reaching millions throughout the world</span>
-		<span data-timing="84.03"> - millions of despairing men, women, and little children -</span>
-		<span data-timing="87.14"> victims of a system that makes men torture</span>
-		<span data-timing="90.07"> and imprison innocent people.</span>
-
-		<span data-timing="92.18"> To those who can hear me, I say</span>
-		<span data-timing="94.16"> - do not despair.</span>
-		<span data-timing="96.05"> The misery that is now upon us</span>
-		<span data-timing="97.12"> is but the passing of greed </span>
-		<span data-timing="99.12"> - the bitterness of men who fear the way of human progress.</span>
-		<span data-timing="103.06"> The hate of men will pass,</span>
-		<span data-timing="105.03"> and dictators die,</span>
-		<span data-timing="106.18"> and the power they took from the people</span>
-		<span data-timing="108.15"> will return to the people.</span>
-		<span data-timing="110.07"> And so long as men die,</span>
-		<span data-timing="112.01"> liberty will never perish...</span>
-
-		<span data-timing="115.1"> Soldiers! </span>
-		<span data-timing="116.09"> don’t give yourselves to brutes </span>
-		<span data-timing="118.05"> - men who despise you </span>
-		<span data-timing="119.09"> - enslave you </span>
-		<span data-timing="120.12"> - who regiment your lives</span>
-		<span data-timing="122.0"> - tell you what to do </span>
-		<span data-timing="122.19"> - what to think </span>
-		<span data-timing="122.23"> and what to feel! </span>
-		<span data-timing="124.09"> Who drill you </span>
-		<span data-timing="125.02"> - diet you </span>
-		<span data-timing="125.20"> - treat you like cattle, </span>
-		<span data-timing="127.01"> use you as cannon fodder.</span>
-		<span data-timing="128.18"> Don’t give yourselves to these unnatural men</span>
-		<span data-timing="131.12"> - machine men</span>
-		<span data-timing="132.17"> with machine minds</span>
-		<span data-timing="133.18"> and machine hearts!</span>
-		<span data-timing="135.02"> You are not machines!</span>
-		<span data-timing="136.13"> You are not cattle!</span>
-		<span data-timing="137.18"> You are men!</span>
-		<span data-timing="139.0">You have the love of humanity in your hearts!</span>
-		<span data-timing="141.05">You don’t hate!</span>
-		<span data-timing="142.05">Only the unloved hate</span>
-		<span data-timing="143.19">- the unloved and the unnatural!</span>
-		<span data-timing="145.16">Soldiers!</span>
-		<span data-timing="146.16">Don’t fight for slavery!</span>
-		<span data-timing="148.02">Fight for liberty!</span>
-
-		<span data-timing="149.06">In the 17th Chapter of St Luke it is written:</span>
-		<span data-timing="151.06">“the Kingdom of God is within man”</span>
-		<span data-timing="152.19">- not one man</span>
-		<span data-timing="153.17">nor a group of men,</span>
-		<span data-timing="155.02"> but in all men!</span>
-		<span data-timing="156.0"> In you!</span>
-		<span data-timing="156.2"> You, the people have the power</span>
-		<span data-timing="158.22"> - the power to create machines.</span>
-		<span data-timing="160.1"> The power to create happiness!</span>
-		<span data-timing="162.0"> You, the people,</span>
-		<span data-timing="162.16"> have the power to make this life free and beautiful,</span>
-		<span data-timing="165.15"> to make this life a wonderful adventure.</span>
-
-		<span data-timing="168.01"> Then - in the name of democracy</span>
-		<span data-timing="169.17"> - let us use that power</span>
-		<span data-timing="171.05"> - let us all unite.</span>
-		<span data-timing="172.21"> Let us fight for a new world</span>
-		<span data-timing="175.06"> - a decent world</span>
-		<span data-timing="176.1">that will give men a chance to work</span>
-		<span data-timing="178.03">- that will give youth a future</span>
-		<span data-timing="179.14">and old age a security.</span>
-		<span data-timing="181.07">By the promise of these things,</span>
-		<span data-timing="182.17">brutes have risen to power.</span>
-		<span data-timing="184.07">But they lie!</span>
-		<span data-timing="185.04">They do not fulfil that promise.</span>
-		<span data-timing="187.03">They never will!</span>
-
-		<span data-timing="188.04">Dictators free themselves</span>
-		<span data-timing="190.05">but they enslave the people!</span>
-		<span data-timing="192.02">Now let us fight to fulfil that promise!</span>
-		<span data-timing="195.05">Let us fight to free the world</span>
-		<span data-timing="197.15">- to do away with national barriers</span>
-		<span data-timing="199.17">- to do away with greed,</span>
-		<span data-timing="201.09">with hate and intolerance.</span>
-		<span data-timing="203.09">Let us fight for a world of reason,</span>
-		<span data-timing="205.17">a world where science and progress will lead to all men’s happiness.</span>
-		<span data-timing="210.13">Soldiers!</span>
-		<span data-timing="211.12">in the name of democracy,</span>
-		<span data-timing="213.03">let us all unite!</span>
-	</p>
-
+						<span data-timing="92.18"> To those who can hear me, I say </span>
+						<span data-timing="94.16"> - do not despair. </span>
+						<span data-timing="96.05"> The misery that is now upon us </span>
+						<span data-timing="97.12"> is but the passing of greed </span>
+						<span data-timing="99.12"> - the bitterness of men who fear the way of human progress. </span>
+						<span data-timing="103.06"> The hate of men will pass, </span>
+						<span data-timing="105.03"> and dictators die, </span>
+						<span data-timing="106.18"> and the power they took from the people </span>
+						<span data-timing="108.15"> will return to the people. </span>
+						<span data-timing="110.07"> And so long as men die, </span>
+						<span data-timing="112.01"> liberty will never perish... </span>
+					</p>
+				</div>
+				<div class="speech">
+					<p class="speech__inner">
+						<span data-timing="115.1"> Soldiers! </span>
+						<span data-timing="116.09"> don’t give yourselves to brutes </span>
+						<span data-timing="118.05"> - men who despise you </span>
+						<span data-timing="119.09"> - enslave you </span>
+						<span data-timing="120.12"> - who regiment your lives </span>
+						<span data-timing="122.0"> - tell you what to do </span>
+						<span data-timing="122.19"> - what to think </span>
+						<span data-timing="122.23"> and what to feel! </span>
+						<span data-timing="124.09"> Who drill you </span>
+						<span data-timing="125.02"> - diet you </span>
+						<span data-timing="125.20"> - treat you like cattle, </span>
+						<span data-timing="127.01"> use you as cannon fodder. </span>
+						<span data-timing="128.18"> Don’t give yourselves to these unnatural men </span>
+						<span data-timing="131.12"> - machine men </span>
+						<span data-timing="132.17"> with machine minds </span>
+						<span data-timing="133.18"> and machine hearts! </span>
+						<span data-timing="135.02"> You are not machines! </span>
+						<span data-timing="136.13"> You are not cattle! </span>
+						<span data-timing="137.18"> You are men! </span>
+						<span data-timing="139.0">You have the love of humanity in your hearts! </span>
+						<span data-timing="141.05">You don’t hate! </span>
+						<span data-timing="142.05">Only the unloved hate </span>
+						<span data-timing="143.19">- the unloved and the unnatural! </span>
+						<span data-timing="145.16">Soldiers! </span>
+						<span data-timing="146.16">Don’t fight for slavery! </span>
+						<span data-timing="148.02">Fight for liberty! </span>
+					</p>
+				</div>
+				<div class="speech">
+					<p class="speech__inner">
+						<span data-timing="149.06">In the 17th Chapter of St Luke it is written: </span>
+						<span data-timing="151.06">“the Kingdom of God is within man” </span>
+						<span data-timing="152.19">- not one man </span>
+						<span data-timing="153.17">nor a group of men, </span>
+						<span data-timing="155.02"> but in all men! </span>
+						<span data-timing="156.0"> In you! </span>
+						<span data-timing="156.2"> You, the people have the power </span>
+						<span data-timing="158.22"> - the power to create machines. </span>
+						<span data-timing="160.1"> The power to create happiness! </span>
+						<span data-timing="162.0"> You, the people, </span>
+						<span data-timing="162.16"> have the power to make this life free and beautiful, </span>
+						<span data-timing="165.15"> to make this life a wonderful adventure. </span>
+					</p>
+				</div>
+				<div class="speech">
+					<p class="speech__inner">
+						<span data-timing="168.01"> Then - in the name of democracy </span>
+						<span data-timing="169.17"> - let us use that power </span>
+						<span data-timing="171.05"> - let us all unite. </span>
+						<span data-timing="172.21"> Let us fight for a new world </span>
+						<span data-timing="175.06"> - a decent world </span>
+						<span data-timing="176.1">that will give men a chance to work </span>
+						<span data-timing="178.03">- that will give youth a future </span>
+						<span data-timing="179.14">and old age a security. </span>
+						<span data-timing="181.07">By the promise of these things, </span>
+						<span data-timing="182.17">brutes have risen to power. </span>
+						<span data-timing="184.07">But they lie! </span>
+						<span data-timing="185.04">They do not fulfil that promise. </span>
+						<span data-timing="187.03">They never will! </span>
+					</p>
+				</div>
+				<div class="speech">
+					<p class="speech__inner">
+						<span data-timing="188.04">Dictators free themselves </span>
+						<span data-timing="190.05">but they enslave the people! </span>
+						<span data-timing="192.02">Now let us fight to fulfil that promise! </span>
+						<span data-timing="195.05">Let us fight to free the world </span>
+						<span data-timing="197.15">- to do away with national barriers </span>
+						<span data-timing="199.17">- to do away with greed, </span>
+						<span data-timing="201.09">with hate and intolerance. </span>
+						<span data-timing="203.09">Let us fight for a world of reason, </span>
+						<span data-timing="205.17">a world where science and progress will lead to all men’s
+							happiness. </span>
+						<span data-timing="210.13">Soldiers! </span>
+						<span data-timing="211.12">in the name of democracy, </span>
+						<span data-timing="213.03">let us all unite! </span>
+					</p>
+				</div>
+			</div>
+			<div class="audio-holder">
+				<audio id="audio" controls>
+					<source src="assets/speech.mp4" type="audio/mpeg">
+				</audio>
+			</div>
+		</section>
+	</article>
 	<!-- Scripts -->
 	<script src="js/detects.js"></script>
 	<script src="js/script.js"></script>

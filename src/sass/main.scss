@@ -13,9 +13,9 @@ html {
   background-color: #29262a;
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 body {
-  font-size: 10px;
 }
 .main {
   display: flex;
@@ -31,12 +31,12 @@ body {
   background-position: 50%;
   background-size: cover;
   z-index: 0;
-  &:before {
-    display: block;
-    content: " ";
-    width: 100%;
-    padding-top: 150%;
-  }
+  // &:before {
+  //   display: block;
+  //   content: " ";
+  //   width: 100%;
+  //   padding-top: 150%;
+  // }
 }
 .content {
   display: flex;
@@ -75,6 +75,31 @@ body {
     font-size: 1.8em;
     color: #c7933c;
     text-transform: uppercase;
+  }
+}
+.play {
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color ease 1s;
+  &:after {
+    display: inline-block;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-left: 10px;
+    content: "";
+    background-image: url(/assets/audio.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+  &:hover {
+    color: #c7933c;
+  }
+  &--hide {
+    animation-name: fade, hide;
+    animation-duration: 1s, 0s;
+    animation-delay: 0s, 1s;
+    animation-fill-mode: forwards;
   }
 }
 .speech__holder {
@@ -154,6 +179,15 @@ audio {
     opacity: 0;
   }
 }
+@keyframes hide {
+  0% {
+    position: static;
+  }
+  100% {
+    position: absolute;
+    top: -100%;
+  }
+}
 @keyframes pin-to-top {
   0% {
     top: -100%;
@@ -193,12 +227,12 @@ audio {
     background-position: 50%;
     background-size: cover;
     z-index: 0;
-    &:before {
-      display: block;
-      content: " ";
-      width: 100%;
-      padding-top: 150%;
-    }
+    // &:before {
+    //   display: block;
+    //   content: " ";
+    //   width: 100%;
+    //   padding-top: 150%;
+    // }
   }
   .content {
     width: 60%;

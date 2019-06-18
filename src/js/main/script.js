@@ -12,6 +12,9 @@ playButton.addEventListener("click", function() {
   document
     .getElementsByClassName("audio-holder")[0]
     .classList.add("audio-holder--active");
+  document
+    .getElementsByClassName("play")[0]
+    .classList.add("play--hide");
   audio.play();
 });
 

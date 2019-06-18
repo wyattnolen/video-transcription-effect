@@ -1,0 +1,26 @@
+<svg id="layer1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 347.016 266.23201">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-width: 5px;
+      }
+
+      .cls-1 {
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+  <title>audio</title>
+  <g id="g1">
+    <polygon id="polygon1" class="cls-1" points="180.575 2.5 89.087 81.631 2.5 81.631 2.5 183.46 87.775 183.46 180.575 263.732 180.575 2.5"/>
+    <path id="path1" class="cls-2" d="M256.68267,261.49333a107.1151,107.1151,0,0,0-.45333-114.416" transform="translate(-29.5 -70.93467)"/>
+    <path id="path2" class="cls-2" d="M293.77068,109.53067a159.84492,159.84492,0,0,1,.512,189.54134" transform="translate(-29.5 -70.93467)"/>
+    <path class="cls-2" d="M329.12,333.92534A208.53327,208.53327,0,0,0,328.58135,74.72" transform="translate(-29.5 -70.93467)"/>
+  </g>
+</svg>
